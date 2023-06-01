@@ -7,10 +7,7 @@ let current_text = text_area.text()
 // save adds an extra s 
 // some key combination to increase font size
 
-
-
 // INSERT MODE
-// if(mode = i)
 document.onkeydown = function(e)  { 
   switch(e.key){
     case("Tab"): break;
