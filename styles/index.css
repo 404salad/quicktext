@@ -1,0 +1,13 @@
+
+body {
+    color-scheme: dark;
+    background-color: black;
+}
+#text-area {
+    display: block;
+    color: white;
+    margin-top: 5vw;
+    margin-left: 20vw;
+    max-width:60vw ;
+    word-wrap:break-word;
+}
