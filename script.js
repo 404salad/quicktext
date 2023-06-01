@@ -4,11 +4,19 @@ let current_text = text_area.text()
 // MAKING A SIMPLE TEXT EDITOR
 // FIXED BACKSPACE
 // try adding a vim mode
-// save adds an extra s 
 // some key combination to increase font size
+// probably switch to using arrays
 
 // INSERT MODE
-document.onkeydown = function(e)  { 
+document.onkeydown = function(e) { 
+if(e.ctrlKey && e.key === "Backspace"){// ctrl + backspace
+        current_text = current_text.substring(0,current_text.lastIndexOf("&nbsp;"))
+        text_area.html(current_text)
+}
+else if(e.ctrlKey && e.key === "s"){    
+    // to fix the extra s on save issue
+}
+else{
   switch(e.key){
     case("Tab"): break;
     case("Shift"): break;
@@ -18,13 +26,7 @@ document.onkeydown = function(e)  {
     case("Escape"): break;
     case(" "): text_area.append("&nbsp;"); break;// a non breaking space
     case("Enter"): text_area.append("<br>"); break;
-    /*
-    case("Control" && "Backspace") : 
-        current_text = text_area.text()
-        //current_text = current_text.substring(0,current_text.lastindexof(" ")-1)
-        text_area.text(current_text)
-        break;
-    */
+
     case("Backspace"):
         current_text = text_area.html()
         // to handle the nbsp; case
@@ -36,9 +38,10 @@ document.onkeydown = function(e)  {
         }
         text_area.html(current_text)
         break;
-        
     default:
         text_area.append(e.key)
 
-    }
+    } }
+current_text = text_area.html()
+text_area.html(current_text)
 }
