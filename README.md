@@ -1,2 +1,2 @@
 # quicktext
-A simple modal text editor inspired by vim
+A basic text editor meant for ctrl+s quick saves
