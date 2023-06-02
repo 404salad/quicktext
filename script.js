@@ -2,11 +2,11 @@ const text_area = $("#text-area")
 let current_text = text_area.text()
 // not using an input box cause then we can use vim keybinds
 // MAKING A SIMPLE TEXT EDITOR
-// FIXED BACKSPACE
+// FIX the BACKSPACE newline issu
 // try adding a vim mode
 // some key combination to increase font size
 // probably switch to using arrays
-
+/// fix newline issue
 // INSERT MODE
 document.onkeydown = function(e) { 
 if(e.ctrlKey && e.key === "Backspace"){// ctrl + backspace
